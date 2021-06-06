@@ -115,8 +115,8 @@ function mobileMenu() {
 function loadReviews() {
 
  const showBtnReviews = document.querySelector('#loadCommentsBtn');
- let hideBtnReviews = document.querySelector('#hideCommentsBtn');
- let reviews = document.querySelector('#loadCommentsWrapper');
+ const hideBtnReviews = document.querySelector('#hideCommentsBtn');
+ const reviews = document.querySelector('#loadCommentsWrapper');
  showBtnReviews.addEventListener('click', function (e) {
   $.get('comments.json', {url: ''}, function (data) {
    $comments = JSON.parse(JSON.stringify(data));
