@@ -121,8 +121,8 @@ function loadReviews() {
   $.get('Comments.json', {url: 'test'}, function (data) {
    $comments = JSON.parse(JSON.stringify(data));
    let commentsParse = $comments['comments'];
-   let count = 5;
-   for (let i = 0; i < count; i++) {
+   let commentsParseLength = $comments['comments'].length;
+   for (let i = 0; i < commentsParseLength; i++) {
     reviews.innerHTML += `
                <div class="product__review">
                 <div class="product__review-head">
