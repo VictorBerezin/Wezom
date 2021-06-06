@@ -118,7 +118,7 @@ function loadReviews() {
  let hideBtnReviews = document.querySelector('#hideCommentsBtn');
  let reviews = document.querySelector('#loadCommentsWrapper');
  showBtnReviews.addEventListener('click', function (e) {
-  $.get('Comments.json', {url: 'test'}, function (data) {
+  $.get('comments.json', {url: ''}, function (data) {
    $comments = JSON.parse(JSON.stringify(data));
    let commentsParse = $comments['comments'];
    let commentsParseLength = $comments['comments'].length;

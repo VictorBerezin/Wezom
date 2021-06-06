@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
@@ -103,6 +104,11 @@ module.exports = {
   new MiniCssExtractPlugin({
    filename: isProduction ? '[name].[hash].min.css' : '[name].css',
    chunkFilename: isProduction ? '[id].[hash].css' : '[id].css',
+  }),
+  new SVGSpritemapPlugin('src/assets/icons/*.svg', {
+   output: {
+    filename: 'icons/sprite.svg',
+   },
   }),
   new HtmlWebpackPlugin({
    filename: 'index.html',
