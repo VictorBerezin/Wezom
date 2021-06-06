@@ -1,5 +1,3 @@
-# Bonum v4
-
 ## Instalation guide
 
 ```bash
