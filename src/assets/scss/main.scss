@@ -1,0 +1,34 @@
+//Plugins
+@import '~swiper/css/swiper.min';
+
+//Required
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+//utils
+@import 'utils/mixins';
+@import 'utils/variables';
+
+//Optional
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/grid';
+
+//base
+@import 'base/common';
+
+//abstracts
+@import 'abstracts/default';
+@import 'abstracts/fonts';
+
+//components
+@import 'components/forms';
+@import 'components/feedback';
+
+//layout
+@import 'layout/header';
+@import 'layout/footer';
+
+//pages
+@import 'pages/product-card';

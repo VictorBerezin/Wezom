@@ -1,0 +1,22 @@
+.footer {
+ background-color: $dark-green;
+ padding: 20px 0;
+
+ .container {
+  @include media-breakpoint-up(xxl) {
+   max-width: 1470px;
+  }
+ }
+
+ &__wrapper {
+  display: flex;
+  justify-content: space-between;
+ }
+
+ &__copyright,
+ &__develop {
+  color: rgba($white, 0.5);
+  line-height: 1.3;
+  font-size: 14px;
+ }
+}

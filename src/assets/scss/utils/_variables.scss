@@ -1,0 +1,66 @@
+// Fonts
+$font-family-base: 'Roboto', sans-serif;
+
+// Colors
+$primary-dark: #33485D;
+$secondary-color: #5C6D7D;
+$active-color: #47B39C;
+$light-grey: #DDE8F0;
+$white: #FFFFFF;
+
+$accent-color: #FFBE48;
+$main-green: #219653;
+$dark-green: #0D4128;
+$medium-green: #229754;
+$available-color: #249755;
+
+$danger-color: #EB5757;
+$light-danger-color: #FDEEEE;
+
+//Background colors
+$background-body: #FFFFFF;
+
+$gradient-bg: linear-gradient(180deg, #219653 0%, #FFFFFF 100%);
+
+//shadows
+$box-shadow: 0 10px 80px rgba(0, 52, 41, 0.3);
+
+//Forms
+$input-bg: #DDE8F0;
+
+//Height
+$header-mob-height: 55px;
+
+//Rating
+$star-fill: #FFA800;
+
+// body
+$body-color: $primary-dark;
+$body-bg: $background-body;
+
+// typography
+$line-height-base: 1.2;
+
+$font-size-base: 1rem;
+
+// buttons
+$btn-border-radius: 0;
+
+// Grid breakpoints
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1500px,
+);
+
+// Grid containers
+$container-max-widths: (
+        sm: 570px,
+        md: 720px,
+        lg: 960px,
+        xl: 1200px,
+        xxl: 1475px,
+);

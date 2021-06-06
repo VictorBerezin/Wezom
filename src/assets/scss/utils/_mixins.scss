@@ -1,0 +1,46 @@
+@mixin reset-button-styles() {
+ padding: 0;
+ background-color: transparent;
+ border: none;
+ @include transition-time;
+
+ &:hover,
+ &:focus,
+ &:active {
+  outline: none;
+  box-shadow: none;
+ }
+
+ &:active,
+ &:focus {
+  box-shadow: 0 0 0 3px rgba($accent-color, 0.5);
+ }
+}
+
+@mixin reset-input-styles() {
+ padding: 0;
+ border: none;
+ @include transition-time;
+
+ &:hover,
+ &:focus,
+ &:active {
+  outline: none;
+ }
+
+ &:active,
+ &:focus {
+  box-shadow: 0 0 0 3px rgba($accent-color, 0.5);
+ }
+}
+
+@mixin transition-time() {
+ transition: .25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@mixin transition-time-long() {
+ transition: 2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+
+
