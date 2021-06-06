@@ -546,23 +546,7 @@
         </div>
 
         <div class="product__rating rating">
-         <div class="rating__stars">
-          <svg width="16" height="14">
-           <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-          </svg>
-          <svg width="16" height="14">
-           <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-          </svg>
-          <svg width="16" height="14">
-           <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-          </svg>
-          <svg width="16" height="14">
-           <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-          </svg>
-          <svg width="16" height="14">
-           <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-          </svg>
-         </div>
+         <div class="rating__stars" style="--rating: 5;"></div>
          <div class="rating__count">
           12
          </div>
@@ -770,23 +754,7 @@
          </div>
 
          <div class="product__review-rating rating">
-          <div class="rating__stars">
-           <svg width="16" height="14">
-            <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-           </svg>
-           <svg width="16" height="14">
-            <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-           </svg>
-           <svg width="16" height="14">
-            <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-           </svg>
-           <svg width="16" height="14">
-            <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-           </svg>
-           <svg width="16" height="14">
-            <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-           </svg>
-          </div>
+          <div class="rating__stars" style="--rating: 3.43;"></div>
          </div>
         </div>
 
@@ -809,23 +777,7 @@
          </div>
 
          <div class="product__review-rating rating">
-          <div class="rating__stars">
-           <svg width="16" height="14">
-            <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-           </svg>
-           <svg width="16" height="14">
-            <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-           </svg>
-           <svg class="not-filled" width="16" height="14">
-            <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-           </svg>
-           <svg class="not-filled" width="16" height="14">
-            <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-           </svg>
-           <svg class="not-filled" width="16" height="14">
-            <use xlink:href="/src/assets/icons/sprite.svg#rating-star"></use>
-           </svg>
-          </div>
+          <div class="rating__stars" style="--rating: 2.3;"></div>
          </div>
         </div>
 
@@ -834,12 +786,13 @@
          модельке. Спасибо за молниеносную отправку!
         </div>
        </div>
+       <div id="loadCommentsWrapper"></div>
       </div>
 
       <div class="product__load-reviews">
-       <a href="#!" class="product__load-reviews-button">Показать еще</a>
+       <span id="loadCommentsBtn" class="product__load-reviews-button">Показать еще</span>
+       <span id="hideCommentsBtn" class="product__load-reviews-button">Скрыть отзывы</span>
       </div>
-
      </div>
     </div>
    </div>

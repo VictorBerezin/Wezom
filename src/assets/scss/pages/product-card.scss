@@ -870,6 +870,7 @@
   border: 1px solid $star-fill;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  cursor: pointer;
   @include transition-time;
 
   &:hover {
@@ -885,6 +886,10 @@
   &:active,
   &:focus {
    box-shadow: 0 0 0 3px rgba($accent-color, 0.5);
+  }
+
+  &#hideCommentsBtn {
+   display: none;
   }
  }
 }

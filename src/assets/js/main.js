@@ -73,8 +73,6 @@ function smallBasket() {
 }
 
 
-
-
 //catalog menu
 function mobileMenu() {
  const mobileMenuBtn = document.querySelector('#mobileMenuTrigger');
@@ -113,10 +111,60 @@ function mobileMenu() {
  });
 }
 
+//load reviews
+function loadReviews() {
+
+ const showBtnReviews = document.querySelector('#loadCommentsBtn');
+ let hideBtnReviews = document.querySelector('#hideCommentsBtn');
+ let reviews = document.querySelector('#loadCommentsWrapper');
+ showBtnReviews.addEventListener('click', function (e) {
+  $.get('Comments.json', {url: 'test'}, function (data) {
+   $comments = JSON.parse(JSON.stringify(data));
+   let commentsParse = $comments['comments'];
+   let count = 5;
+   for (let i = 0; i < count; i++) {
+    reviews.innerHTML += `
+               <div class="product__review">
+                <div class="product__review-head">
+                 <div class="product__review-name">
+                   ${commentsParse[i]['name']}
+                 </div>
+
+                 <div class="product__review-date">
+                    ${commentsParse[i]['date']}
+                 </div>
+
+                 <div class="product__review-rating rating">
+                 <div class="rating__stars" style="--rating:  ${commentsParse[i]['stars']};"></div>
+                 </div>
+                </div>
+
+                <div class="product__review-body">
+                   ${commentsParse[i]['message']}
+                </div>
+               </div>
+    `;
+   }
+   showBtnReviews.style.display = "none";
+   hideBtnReviews.style.display = "inline-flex";
+  });
+ });
+
+ hideBtnReviews.addEventListener('click', function (e) {
+  reviews.innerHTML = '';
+  showBtnReviews.style.display = "inline-flex";
+  hideBtnReviews.style.display = "none";
+  $("html, body").animate({
+   scrollTop: $(".product__item_reviews").offset().top - 80
+  }, 800);
+ });
+}
+
 //loading functions
 document.addEventListener('DOMContentLoaded', () => {
  catalogMenu();
  smallBasket();
  mobileMenu();
+ loadReviews();
 });
 

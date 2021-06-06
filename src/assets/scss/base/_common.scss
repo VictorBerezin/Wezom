@@ -12,15 +12,31 @@
 }
 
 //Rating component
+
+:root {
+ --star-size: 22px;
+ --star-color: rgba(255, 168, 0, 0.5);
+ --star-background: #FFA800;
+}
+
 .rating {
  display: flex;
  align-items: center;
 
  &__stars {
-  color: $star-fill;
+  --percent: calc(var(--rating) / 5 * 100%);
 
-  .not-filled {
-   color: rgba($star-fill, 0.5);
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times;
+  line-height: 1;
+
+  &::before {
+   content: '★★★★★';
+   letter-spacing: 3px;
+   background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
   }
  }
 
