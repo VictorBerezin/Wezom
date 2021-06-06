@@ -43,7 +43,7 @@ function catalogMenu() {
  });
 }
 
-//small basket menu
+//small basket
 function smallBasket() {
  const smallBasketBtn = document.querySelector('#smallBasketTrigger');
  const smallBasket = document.querySelector('#smallBasket');
@@ -71,7 +71,6 @@ function smallBasket() {
   }
  });
 }
-
 
 //catalog menu
 function mobileMenu() {
@@ -113,7 +112,6 @@ function mobileMenu() {
 
 //load reviews
 function loadReviews() {
-
  const showBtnReviews = document.querySelector('#loadCommentsBtn');
  const hideBtnReviews = document.querySelector('#hideCommentsBtn');
  const reviews = document.querySelector('#loadCommentsWrapper');
